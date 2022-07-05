@@ -1,0 +1,20 @@
+#result{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+._card {
+    background-color: #AE81A3;
+    border-radius: 20px;
+    margin: 20px;
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+}
+img {
+    border-radius: 20px 20px 0 0;
+
+}

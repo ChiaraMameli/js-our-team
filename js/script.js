@@ -69,21 +69,27 @@ const team = [
 // Stampo le informazioni
 
 const display = document.getElementById('result')
-let list = '';
+let listElement = '';
 let listName = '';
 let listJob = '';
 let listPic = '';
-display.append(list);
 
 
 for(let i = 0; i < team.length; i++){
     const employee = team[i];
-    
-    listName = `<li>name: ${employee['name']}</li>`
-    listJob = `<li>job: ${employee['job']}</li>`
-    listPic = `<img src="../img/${employee['pic']}" alt="">`
 
-    list+= listName += listJob += listPic
+    //creo la card
+    let card = document.createElement('div')
+    card.className = '_card';    
+
+    //costruisco la mia lista
+    listPic = `<ul><img src="../img/${employee['pic']}" alt="">`
+    listName = `<li>name: ${employee['name']}</li>`
+    listJob = `<li>job: ${employee['job']}</li></ul>`
+
+    // Stampo in pagina
+    listElement = listPic += listName += listJob
+    card.innerHTML = listElement;
+    display.append(card)
 }
 
-display.innerHTML = list
