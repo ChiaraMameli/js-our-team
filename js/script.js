@@ -31,6 +31,7 @@ Buon lavoro!
 //Scott Estrada |	Developer            |	scott-estrada-developer.jpg
 //Barbara Ramos |	Graphic Designer     |	barbara-ramos-graphic-designer.jpg 
 
+
 // Creo l'array
 const team = [
     {
@@ -67,11 +68,22 @@ const team = [
 
 // Stampo le informazioni
 
+const display = document.getElementById('result')
+let list = '';
+let listName = '';
+let listJob = '';
+let listPic = '';
+display.append(list);
+
+
 for(let i = 0; i < team.length; i++){
     const employee = team[i];
-    console.log('name: ' + employee['name'])
-    console.log('job: ' + employee['job'])
-    console.log('pic: ' + employee['pic'])
-    console.log('---------')
+    
+    listName = `<li>name: ${employee['name']}</li>`
+    listJob = `<li>job: ${employee['job']}</li>`
+    listPic = `<li>pic: ${employee['pic']}</li>`
+
+    list+= listName += listJob += listPic
 }
 
+display.innerHTML = list
