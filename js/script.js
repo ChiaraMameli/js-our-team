@@ -31,6 +31,7 @@ Buon lavoro!
 //Scott Estrada |	Developer            |	scott-estrada-developer.jpg
 //Barbara Ramos |	Graphic Designer     |	barbara-ramos-graphic-designer.jpg 
 
+// Creo l'array
 const team = [
     {
         name: 'Wayne Barnett',
@@ -64,4 +65,13 @@ const team = [
     }
 ]
 
-console.table(team)
+// Stampo le informazioni
+
+for(let i = 0; i < team.length; i++){
+    const employee = team[i];
+    console.log('name: ' + employee['name'])
+    console.log('job: ' + employee['job'])
+    console.log('pic: ' + employee['pic'])
+    console.log('---------')
+}
+
