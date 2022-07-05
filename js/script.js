@@ -81,7 +81,7 @@ for(let i = 0; i < team.length; i++){
     
     listName = `<li>name: ${employee['name']}</li>`
     listJob = `<li>job: ${employee['job']}</li>`
-    listPic = `<li>pic: ${employee['pic']}</li>`
+    listPic = `<img src="../img/${employee['pic']}" alt="">`
 
     list+= listName += listJob += listPic
 }
