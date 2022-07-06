@@ -83,7 +83,7 @@ for(let i = 0; i < team.length; i++){
     card.className = '_card';    
 
     //costruisco la mia lista
-    listPic = `<ul><img src="../img/${employee['pic']}" alt="">`
+    listPic = `<ul><img src="../../img/${employee['pic']}" alt="">`
     listName = `<li>name: ${employee['name']}</li>`
     listJob = `<li>job: ${employee['job']}</li></ul>`
 
